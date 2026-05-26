@@ -1,0 +1,1874 @@
+[
+  {
+    "timestamp": "2026-05-24T00:52:04.091Z",
+    "success": true,
+    "durationMs": 75192.02,
+    "request": {
+      "message": "makan 25rb"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": "food",
+        "amount": 25000,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:52:56.261Z",
+    "success": true,
+    "durationMs": 127330.4,
+    "request": {
+      "message": "kopi 18k"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": "drink",
+        "amount": 18000,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:51:44.486Z",
+    "success": true,
+    "durationMs": 55554.57,
+    "request": {
+      "message": "indomaret 45"
+    },
+    "response": {
+      "success": true,
+      "data": {}
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:51:50.870Z",
+    "success": true,
+    "durationMs": 61937.95,
+    "request": {
+      "message": "alfamart 32"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": "null",
+        "payee": null,
+        "category": "food",
+        "amount": 32000,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:52:39.825Z",
+    "success": true,
+    "durationMs": 110892.56,
+    "request": {
+      "message": "gopud 28"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": "food",
+        "amount": 25000,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:52:45.957Z",
+    "success": true,
+    "durationMs": 117024,
+    "request": {
+      "message": "grab 17"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": "food",
+        "amount": 25000,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:52:42.635Z",
+    "success": true,
+    "durationMs": 113702.26,
+    "request": {
+      "message": "gojek 15"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": "expense",
+        "amount": 15000,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:51:53.531Z",
+    "success": true,
+    "durationMs": 64598.15,
+    "request": {
+      "message": "isi bensin 100"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": "expense",
+        "amount": 10000,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:52:46.128Z",
+    "success": true,
+    "durationMs": 117193.69,
+    "request": {
+      "message": "pertalite 50"
+    },
+    "response": {
+      "success": true,
+      "data": {}
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:52:28.808Z",
+    "success": true,
+    "durationMs": 99873.6,
+    "request": {
+      "message": "parkir 5"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": "food",
+        "amount": 25000,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:53:18.782Z",
+    "success": true,
+    "durationMs": 149846.96,
+    "request": {
+      "message": "tol 15"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": "food",
+        "amount": 15000,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:52:00.833Z",
+    "success": true,
+    "durationMs": 71897.59,
+    "request": {
+      "message": "bayar kos 750"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": "bank",
+        "amount": 75000,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:52:06.968Z",
+    "success": true,
+    "durationMs": 78032.43,
+    "request": {
+      "message": "listrik 200"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": "utility",
+        "amount": 20000,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:51:37.922Z",
+    "success": true,
+    "durationMs": 48986.28,
+    "request": {
+      "message": "token 100"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": "transaction",
+        "amount": 100,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:51:19.236Z",
+    "success": true,
+    "durationMs": 30299.74,
+    "request": {
+      "message": "wifi 350"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": "food",
+        "amount": 350,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:52:33.790Z",
+    "success": true,
+    "durationMs": 104853.46,
+    "request": {
+      "message": "air galon 25"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": "",
+        "category": "transportation",
+        "amount": 25,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:52:26.024Z",
+    "success": true,
+    "durationMs": 97087.48,
+    "request": {
+      "message": "laundry 30"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": "miscellaneous",
+        "amount": 30,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:53:14.040Z",
+    "success": true,
+    "durationMs": 145103.46,
+    "request": {
+      "message": "steam 120"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": null,
+        "amount": 0,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:53:01.732Z",
+    "success": true,
+    "durationMs": 132795.54,
+    "request": {
+      "message": "spotify 55"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": "music",
+        "amount": 55000,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:51:32.389Z",
+    "success": true,
+    "durationMs": 43451.73,
+    "request": {
+      "message": "netflix 65"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": "general",
+        "amount": 0,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:52:18.827Z",
+    "success": true,
+    "durationMs": 89890.02,
+    "request": {
+      "message": "youtube premium 40"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": " entertainment",
+        "amount": 40000,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:53:16.057Z",
+    "success": true,
+    "durationMs": 147119.75,
+    "request": {
+      "message": "chatgpt 300"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": null,
+        "amount": 0,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:51:44.291Z",
+    "success": true,
+    "durationMs": 55353.88,
+    "request": {
+      "message": "shopee 145"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": "null",
+        "category": "other",
+        "amount": 145000,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:51:23.125Z",
+    "success": true,
+    "durationMs": 34187.14,
+    "request": {
+      "message": "tokped 88"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": "transaction",
+        "amount": 0,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:51:14.616Z",
+    "success": true,
+    "durationMs": 25677.85,
+    "request": {
+      "message": "beli keyboard 450"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": "food",
+        "amount": 45000,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:52:20.890Z",
+    "success": true,
+    "durationMs": 91948.88,
+    "request": {
+      "message": "mouse 120"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": null,
+        "amount": 0,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:53:11.921Z",
+    "success": true,
+    "durationMs": 142978.72,
+    "request": {
+      "message": "monitor 2500"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": "food",
+        "amount": 2500,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:51:57.900Z",
+    "success": true,
+    "durationMs": 68957.95,
+    "request": {
+      "message": "headset 350"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": "food",
+        "amount": 25000,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:52:53.537Z",
+    "success": true,
+    "durationMs": 124594.91,
+    "request": {
+      "message": "pulsa 50"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": "other",
+        "amount": 50,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:52:31.474Z",
+    "success": true,
+    "durationMs": 102531.39,
+    "request": {
+      "message": "paket data 75"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": "other",
+        "amount": 75000,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:53:04.176Z",
+    "success": true,
+    "durationMs": 135233.38,
+    "request": {
+      "message": "bpjs 150"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": "expense",
+        "amount": 0,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:51:28.547Z",
+    "success": true,
+    "durationMs": 39603.28,
+    "request": {
+      "message": "obat 45"
+    },
+    "response": {
+      "success": true,
+      "data": {}
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:51:05.143Z",
+    "success": true,
+    "durationMs": 16199.54,
+    "request": {
+      "message": "dokter 120"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": "food",
+        "amount": 25000,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:53:09.242Z",
+    "success": true,
+    "durationMs": 140298.3,
+    "request": {
+      "message": "mie ayam 20"
+    },
+    "response": {
+      "success": true,
+      "data": {}
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:52:51.195Z",
+    "success": true,
+    "durationMs": 122250.97,
+    "request": {
+      "message": "bakso 25"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": "food",
+        "amount": 25,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:52:23.511Z",
+    "success": true,
+    "durationMs": 94566.3,
+    "request": {
+      "message": "nasgor 22"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": "food",
+        "amount": 22000,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:53:06.647Z",
+    "success": true,
+    "durationMs": 137701.97,
+    "request": {
+      "message": "ayam geprek 18"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": "",
+        "amount": null,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:52:58.822Z",
+    "success": true,
+    "durationMs": 129876.82,
+    "request": {
+      "message": "martabak 45"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": null,
+        "amount": null,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:51:47.993Z",
+    "success": true,
+    "durationMs": 59047.25,
+    "request": {
+      "message": "es teh 5"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": "2021-10-15",
+        "payee": "John Doe",
+        "category": "food",
+        "amount": 5000,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:51:28.233Z",
+    "success": true,
+    "durationMs": 39286.92,
+    "request": {
+      "message": "boba 28"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": "food",
+        "amount": 25000,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:52:48.819Z",
+    "success": true,
+    "durationMs": 119872.76,
+    "request": {
+      "message": "roti 15"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": "food",
+        "amount": 15000,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:53:09.115Z",
+    "success": true,
+    "durationMs": 140168.4,
+    "request": {
+      "message": "jajan 12"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": "",
+        "amount": 0,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:51:41.074Z",
+    "success": true,
+    "durationMs": 52127.64,
+    "request": {
+      "message": "rokok 38"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": null,
+        "amount": null,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:51:41.196Z",
+    "success": true,
+    "durationMs": 52249.15,
+    "request": {
+      "message": "vape liquid 120"
+    },
+    "response": {
+      "success": true,
+      "data": {}
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:52:37.196Z",
+    "success": true,
+    "durationMs": 108248.72,
+    "request": {
+      "message": "kopi kenangan 30"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": "food",
+        "amount": 25000,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:51:09.656Z",
+    "success": true,
+    "durationMs": 20709.14,
+    "request": {
+      "message": "starbucks 75"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": "",
+        "payee": null,
+        "category": "income",
+        "amount": null,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:52:12.924Z",
+    "success": true,
+    "durationMs": 83976.16,
+    "request": {
+      "message": "mixue 16"
+    },
+    "response": {
+      "success": true,
+      "data": {}
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:52:15.630Z",
+    "success": true,
+    "durationMs": 86682.27,
+    "request": {
+      "message": "kfc 57"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": "food",
+        "amount": 57000,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:52:10.152Z",
+    "success": true,
+    "durationMs": 81204.09,
+    "request": {
+      "message": "mcd 68"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": "food",
+        "amount": 68000,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:52:12.719Z",
+    "success": true,
+    "durationMs": 83770.89,
+    "request": {
+      "message": "pizza hut 120"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": "food",
+        "amount": 12000,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:55:20.149Z",
+    "success": true,
+    "durationMs": 121366.39,
+    "request": {
+      "message": "burger bangor 40"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": "food",
+        "amount": 40000,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:55:33.398Z",
+    "success": true,
+    "durationMs": 134615.06,
+    "request": {
+      "message": "sate padang 35"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": "food",
+        "amount": 35000,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:55:28.657Z",
+    "success": true,
+    "durationMs": 129874.23,
+    "request": {
+      "message": "warteg 18"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": "Pengeluaran",
+        "category": "food",
+        "amount": 25000,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:54:42.909Z",
+    "success": true,
+    "durationMs": 84126.4,
+    "request": {
+      "message": "nasi padang 28"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": "food",
+        "amount": 28000,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:53:49.185Z",
+    "success": true,
+    "durationMs": 30401.46,
+    "request": {
+      "message": "ayam bakar 32"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": "ayam bakar",
+        "category": "food",
+        "amount": 32,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:55:40.468Z",
+    "success": true,
+    "durationMs": 141684.93,
+    "request": {
+      "message": "sushi 95"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": "food",
+        "amount": 95000,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:54:57.530Z",
+    "success": true,
+    "durationMs": 98746.27,
+    "request": {
+      "message": "ramen 88"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": "food",
+        "amount": 88000,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:53:55.052Z",
+    "success": true,
+    "durationMs": 36268.24,
+    "request": {
+      "message": "donat 25"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": "food",
+        "amount": 25000,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:54:20.526Z",
+    "success": true,
+    "durationMs": 61741.83,
+    "request": {
+      "message": "ciki 10"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": "food",
+        "amount": 10000,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:55:52.670Z",
+    "success": true,
+    "durationMs": 153886.04,
+    "request": {
+      "message": "susu 22"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": "food",
+        "amount": 22000,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:55:00.318Z",
+    "success": true,
+    "durationMs": 101534.17,
+    "request": {
+      "message": "buah 35"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": "food",
+        "amount": 35000,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:54:26.254Z",
+    "success": true,
+    "durationMs": 67470.21,
+    "request": {
+      "message": "sayur 20"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": "food",
+        "amount": 20000,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:55:25.753Z",
+    "success": true,
+    "durationMs": 126969.04,
+    "request": {
+      "message": "daging 120"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": "food",
+        "amount": 12000,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:55:50.328Z",
+    "success": true,
+    "durationMs": 151543.16,
+    "request": {
+      "message": "ikan 55"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": "food",
+        "amount": 55000,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:53:39.281Z",
+    "success": true,
+    "durationMs": 20496.78,
+    "request": {
+      "message": "telur 30"
+    },
+    "response": {
+      "success": true,
+      "data": {}
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:53:44.160Z",
+    "success": true,
+    "durationMs": 25375.35,
+    "request": {
+      "message": "beras 72"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": "income",
+        "amount": 72000,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:54:52.756Z",
+    "success": true,
+    "durationMs": 93971.1,
+    "request": {
+      "message": "minyak 25"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": "general",
+        "amount": 0,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:54:08.423Z",
+    "success": true,
+    "durationMs": 49638,
+    "request": {
+      "message": "sabun 18"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": "null",
+        "payee": null,
+        "category": "food",
+        "amount": 18000,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:55:47.998Z",
+    "success": true,
+    "durationMs": 149213.25,
+    "request": {
+      "message": "sampo 35"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": "food",
+        "amount": 35000,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:54:55.152Z",
+    "success": true,
+    "durationMs": 96367.24,
+    "request": {
+      "message": "pasta gigi 15"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": "food",
+        "amount": 15000,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:53:34.094Z",
+    "success": true,
+    "durationMs": 15308.32,
+    "request": {
+      "message": "skincare 250"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": "food",
+        "amount": 25000,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:54:29.071Z",
+    "success": true,
+    "durationMs": 70284.99,
+    "request": {
+      "message": "serum 180"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": "food",
+        "amount": 18000,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:54:31.345Z",
+    "success": true,
+    "durationMs": 72558.89,
+    "request": {
+      "message": "barber 35"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": "food",
+        "amount": 35000,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:55:43.129Z",
+    "success": true,
+    "durationMs": 144343.3,
+    "request": {
+      "message": "potong rambut 25"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": "miscellaneous",
+        "amount": 25,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:54:39.844Z",
+    "success": true,
+    "durationMs": 81057.61,
+    "request": {
+      "message": "cuci motor 15"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": "food",
+        "amount": 25000,
+        "notes": "Baku yang bisa Anda gunakan adalah pengeluaran makan. "
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:54:02.311Z",
+    "success": true,
+    "durationMs": 43523.34,
+    "request": {
+      "message": "servis motor 175"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": "service",
+        "amount": 175000,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:53:38.992Z",
+    "success": true,
+    "durationMs": 20204.6,
+    "request": {
+      "message": "ganti oli 65"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": null,
+        "amount": null,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:55:14.114Z",
+    "success": true,
+    "durationMs": 115326.9,
+    "request": {
+      "message": "ban motor 250"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": null,
+        "amount": null,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:55:30.963Z",
+    "success": true,
+    "durationMs": 132175.04,
+    "request": {
+      "message": "tf ibu 1000"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": null,
+        "amount": 0,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:55:15.985Z",
+    "success": true,
+    "durationMs": 117197.13,
+    "request": {
+      "message": "tf ayah 500"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": "other",
+        "amount": null,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:55:03.015Z",
+    "success": true,
+    "durationMs": 104227.38,
+    "request": {
+      "message": "utang ke agus 300"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": "Agus",
+        "category": "debt",
+        "amount": 300000,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:55:04.987Z",
+    "success": true,
+    "durationMs": 106198.61,
+    "request": {
+      "message": "dibayar budi 150"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": "other",
+        "amount": 0,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:54:48.035Z",
+    "success": true,
+    "durationMs": 89246.61,
+    "request": {
+      "message": "kasbon 200"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": "food",
+        "amount": 25000,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:54:40.007Z",
+    "success": true,
+    "durationMs": 81219.1,
+    "request": {
+      "message": "gaji 3200"
+    },
+    "response": {
+      "success": true,
+      "data": {}
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:55:07.372Z",
+    "success": true,
+    "durationMs": 108583.66,
+    "request": {
+      "message": "bonus 500"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": "bonus",
+        "amount": 5000,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:54:15.027Z",
+    "success": true,
+    "durationMs": 56236.88,
+    "request": {
+      "message": "thr 2500"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": "expense",
+        "amount": 25000,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:54:50.363Z",
+    "success": true,
+    "durationMs": 91573.72,
+    "request": {
+      "message": "freelance 750"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": "other",
+        "amount": 75000,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:55:12.350Z",
+    "success": true,
+    "durationMs": 113561.19,
+    "request": {
+      "message": "proyek 1500"
+    },
+    "response": {
+      "success": true,
+      "data": {}
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:54:45.258Z",
+    "success": true,
+    "durationMs": 86468.98,
+    "request": {
+      "message": "donasi 50"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": "donation",
+        "amount": 5000,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:55:12.192Z",
+    "success": true,
+    "durationMs": 113402.92,
+    "request": {
+      "message": "sedekah 20"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": "expense",
+        "amount": 20000,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:54:23.654Z",
+    "success": true,
+    "durationMs": 64864.13,
+    "request": {
+      "message": "masjid 15"
+    },
+    "response": {
+      "success": true,
+      "data": {}
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:55:55.068Z",
+    "success": true,
+    "durationMs": 156278.59,
+    "request": {
+      "message": "zakat 300"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": "tax",
+        "amount": 300000,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:55:45.649Z",
+    "success": true,
+    "durationMs": 146859.64,
+    "request": {
+      "message": "kado 120"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": "food",
+        "amount": 120,
+        "notes": ""
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:55:17.764Z",
+    "success": true,
+    "durationMs": 118973.74,
+    "request": {
+      "message": "main 80"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": "",
+        "amount": 0,
+        "notes": ""
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:55:38.138Z",
+    "success": true,
+    "durationMs": 139346.72,
+    "request": {
+      "message": "bioskop 50"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": "business",
+        "amount": 50000,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:55:09.723Z",
+    "success": true,
+    "durationMs": 110932.1,
+    "request": {
+      "message": "hotel 450"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": "household",
+        "amount": 45000,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:54:36.306Z",
+    "success": true,
+    "durationMs": 77514.75,
+    "request": {
+      "message": "travel 800"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": "activity",
+        "amount": 0,
+        "notes": "Oke, saya siap. Berikan inputnya. Saya akan berusaha sebaik mungkin untuk membuat kalimat deskriptif baku yang efektif dan akurat."
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:55:23.003Z",
+    "success": true,
+    "durationMs": 124210.89,
+    "request": {
+      "message": "kereta 120"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": "transport",
+        "amount": 120000,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:54:23.511Z",
+    "success": true,
+    "durationMs": 64719.27,
+    "request": {
+      "message": "pesawat 1500"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": null,
+        "amount": 0,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:55:35.703Z",
+    "success": true,
+    "durationMs": 136910.97,
+    "request": {
+      "message": "ojol 19"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": "unknown",
+        "amount": null,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:55:58.150Z",
+    "success": true,
+    "durationMs": 3082.05,
+    "request": {
+      "message": "grabfood 42"
+    },
+    "response": {
+      "success": true,
+      "data": {
+        "date": null,
+        "payee": null,
+        "category": "none",
+        "amount": 0,
+        "notes": null
+      }
+    },
+    "status": 200
+  },
+  {
+    "timestamp": "2026-05-24T00:55:56.069Z",
+    "success": true,
+    "durationMs": 1000.77,
+    "request": {
+      "message": "gocar 35"
+    },
+    "response": {
+      "success": true,
+      "data": {}
+    },
+    "status": 200
+  }
+]
