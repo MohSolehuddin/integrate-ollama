@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: integrate-ollama-app
+    restart: unless-stopped
+    env_file:
+      - .env
+    ports:
+      # Port mapping: host:container
+      # Menggunakan port dari .env, default ke 3001
+      - "${PORT:-3001}:${PORT:-3001}"
+    environment:
+      - NODE_ENV=production
+    # Uncomment baris di bawah jika ingin me-mount folder lokal untuk development
+    # volumes:
+    #   - ./src:/app/src
