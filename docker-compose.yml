@@ -11,6 +11,8 @@ services:
       # Port mapping: host:container
       # Menggunakan port dari .env, default ke 3001
       - "${PORT:-3001}:${PORT:-3001}"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     environment:
       - NODE_ENV=production
     # Uncomment baris di bawah jika ingin me-mount folder lokal untuk development
