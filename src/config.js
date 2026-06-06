@@ -1,4 +1,4 @@
-# Centralized configuration
+// Centralized configuration
 require('dotenv').config();
 
 module.exports = {
@@ -9,7 +9,7 @@ module.exports = {
 
   // Budget Service Configuration
   BUDGET_SERVICE_URL: process.env.BUDGET_SERVICE_URL || 'http://localhost:3001',
-  BUDGET_DEFAULT_PASSWORD: process.env.BUDGET_DEFAULT_PASSWORD || '***',
+  BUDGET_DEFAULT_PASSWORD: process.env.BUDGET_DEFAULT_PASSWORD || 'secret',
 
   // Server Configuration
   PORT: process.env.PORT || 3002,
