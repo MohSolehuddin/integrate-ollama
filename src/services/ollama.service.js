@@ -1,7 +1,8 @@
+const axios = require('axios');
 const config = require('../config');
 
 /**
- * Preprocess teks mentah menggunakan model Gemma untuk merapikan dan memperjelas bahasanya.
+ * Preprocess teks mentah menggunakan Qwen Cloud untuk merapikan dan memperjelas bahasanya.
  * @param {string} rawText Teks transaksi mentah dari pengguna
  * @returns {Promise<string>} Kalimat yang lebih jelas
  */
@@ -26,30 +27,37 @@ Input: "${rawText}"
 Output: `.trim();
 
   try {
-    const response = await fetch(`${config.OLLAMA_URL}/api/generate`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        model: config.OLLAMA_PREPROCESS_MODEL,
-        prompt: systemPrompt,
-        stream: false,
-        temperature: 0.1
-      })
-    });
-
-    if (!response.ok) {
-      throw new Error(`Ollama API error (Preprocess): ${response.status} ${response.statusText}`);
+    if (!config.OPENAI_API_KEY) {
+      throw new Error('OPENAI_API_KEY belum di-set. Pastikan sudah ada di .env');
     }
 
-    const data = await response.json();
-    return data.response.trim();
+    const response = await axios.post(`${config.OPENAI_BASE_URL}/chat/completions`, {
+      model: config.OPENAI_MODEL,
+      messages: [
+        { role: 'system', content: systemPrompt },
+        { role: 'user', content: 'Transaksi: ' + rawText }
+      ],
+      temperature: 0.1,
+      max_tokens: 100
+    }, {
+      headers: {
+        'Authorization': `Bearer ${config.OPENAI_API_KEY}`,
+        'Content-Type': 'application/json'
+      },
+      timeout: 10000 // 10s timeout
+    });
+
+    return response.data.choices[0].message.content.trim();
   } catch (error) {
-    throw new Error(`Gagal mem-preprocess data dengan Gemma: ${error.message}`);
+    if (error.code === 'ECONNABORTED') {
+      throw new Error(`Timeout: preprocess terlalu lama (>10s)`);
+    }
+    throw new Error(`Gagal mem-preprocess data dengan Qwen Cloud: ${error.message}`);
   }
 };
 
 /**
- * Berkomunikasi dengan Ollama API untuk mengekstrak data transaksi
+ * Berkomunikasi dengan Qwen Cloud API untuk mengekstrak data transaksi ke JSON.
  * @param {string} rawText Teks transaksi mentah
  * @returns {Promise<Object>} Data transaksi yang sudah di-parse menjadi Object JavaScript
  */
@@ -57,7 +65,7 @@ const extractTransactionData = async (rawText) => {
   try {
     console.log("Original Input:", rawText);
     const cleanText = await preprocessText(rawText);
-    console.log("Cleaned by Gemma:", cleanText);
+    console.log("Cleaned by Qwen:", cleanText);
 
     const systemPrompt = `Extract transaction data into JSON.
 RULES:
@@ -75,26 +83,34 @@ JSON: {"date": null, "payee": "Agus", "category": "debt", "amount": 300000, "not
 Text: "${cleanText}"
 JSON: `.trim();
 
-    const response = await fetch(`${config.OLLAMA_URL}/api/generate`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        model: config.OLLAMA_MODEL,
-        prompt: systemPrompt,
-        format: 'json', 
-        stream: false,
-        temperature: 0.0 
-      })
+    const response = await axios.post(`${config.OPENAI_BASE_URL}/chat/completions`, {
+      model: config.OPENAI_MODEL,
+      messages: [
+        { role: 'system', content: systemPrompt },
+        { role: 'user', content: 'Parse: ' + cleanText }
+      ],
+      temperature: 0.0,
+      max_tokens: 256
+    }, {
+      headers: {
+        'Authorization': `Bearer ${config.OPENAI_API_KEY}`,
+        'Content-Type': 'application/json'
+      },
+      timeout: 10000
     });
 
-    if (!response.ok) {
-      throw new Error(`Ollama API error: ${response.status} ${response.statusText}`);
+    const content = response.data.choices[0].message.content.trim();
+    // Extract JSON block (handles markdown ```json or plain)
+    const jsonMatch = content.match(/\{[\s\S]*\}/);
+    if (!jsonMatch) {
+      throw new Error(`Gagal parse JSON dari Qwen output: ${content}`);
     }
-
-    const data = await response.json();
-    return JSON.parse(data.response);
+    return JSON.parse(jsonMatch[0]);
   } catch (error) {
-    throw new Error(`Gagal memproses data dengan Ollama: ${error.message}`);
+    if (error.code === 'ECONNABORTED') {
+      throw new Error(`Timeout: parsing transaksi terlalu lama (>10s)`);
+    }
+    throw new Error(`Gagal memproses data dengan Qwen Cloud: ${error.message}`);
   }
 };
 

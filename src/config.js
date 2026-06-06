@@ -2,10 +2,10 @@
 require('dotenv').config();
 
 module.exports = {
-  // Ollama Configuration
-  OLLAMA_URL: process.env.OLLAMA_URL || 'http://localhost:11434',
-  OLLAMA_MODEL: process.env.OLLAMA_MODEL || 'qwen2.5-coder:0.5b',
-  OLLAMA_PREPROCESS_MODEL: process.env.OLLAMA_PREPROCESS_MODEL || 'gemma3:270m',
+  // Qwen Cloud Configuration (OpenAI-compatible)
+  OPENAI_BASE_URL: process.env.OPENAI_BASE_URL || 'https://api.binanceai.com/v1',
+  OPENAI_API_KEY: process.env.OPENAI_API_KEY || null,
+  OPENAI_MODEL: process.env.OPENAI_MODEL || 'qwen3-coder-next:cloud',
 
   // Budget Service Configuration
   BUDGET_SERVICE_URL: process.env.BUDGET_SERVICE_URL || 'http://localhost:3001',
