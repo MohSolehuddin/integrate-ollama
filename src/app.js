@@ -85,18 +85,8 @@ app.use((err, req, res, next) => {
   console.error('Server Error:', err);
   res.status(500).json({ 
     success: false, 
-    error: err.message || 'Terjadi kesalahan internal'
+    error: err.message || 'Terjadi kesalahan internal' 
   });
 });
-
-// Only start server if this file is run directly
-if (require.main === module) {
-  const PORT = config.PORT;
-  app.listen(PORT, () => {
-    console.log(`Server berjalan di http://localhost:${PORT}`);
-    console.log(`Terhubung ke Ollama Cloud di: ${config.OLLAMA_CLOUD_URL}`);
-    console.log(`Terhubung ke Budget Service di: ${config.BUDGET_SERVICE_URL}`);
-  });
-}
 
 module.exports = app;
