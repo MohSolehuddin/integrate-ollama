@@ -5,6 +5,27 @@ const transactionController = require('../controllers/transaction.controller');
 // POST /api/transaction - Parse and sync transaction
 router.post('/transaction', transactionController.parseTransaction);
 
+// POST /api/telegram/setup-webhook - Setup Telegram webhook
+router.post('/telegram/setup-webhook', async (req, res) => {
+  const { token, url } = req.body;
+  if (!token || !url) {
+    return res.status(400).json({ success: false, error: "Token dan URL wajib diisi" });
+  }
+
+  try {
+    const webhookUrl = `https://api.telegram.org/bot${token}/setWebhook`;
+    const response = await fetch(webhookUrl, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ url, drop_pending_updates: true })
+    });
+    const data = await response.json();
+    res.json({ success: true, telegram: data });
+  } catch (error) {
+    res.status(500).json({ success: false, error: error.message });
+  }
+});
+
 // GET /test - Test endpoint
 router.get('/test', (req, res) => {
   res.json({ status: 'ok', message: 'Test endpoint', timestamp: new Date().toISOString() });
