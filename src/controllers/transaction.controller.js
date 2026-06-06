@@ -23,7 +23,17 @@ const parseTransaction = async (req, res) => {
 
     // Get or create user for this sender
     const senderId = req.body.senderId || req.headers['x-telegram-sender'] || 'default';
-    console.log(`Processing transaction for sender: ${senderId}`);
+    
+    // Filter: only accept sender 7133351898
+    const allowedSenders = ['7133351898'];
+    if (!allowedSenders.includes(senderId)) {
+      return res.status(403).json({
+        success: false,
+        error: "Sender tidak diizinkan"
+      });
+    }
+    
+    console.log(`Processing transaction for sender: ${senderId} (allowed)`);
 
     // Parse transaction via Ollama
     const parsedData = await ollamaService.extractTransactionData(inputData);
