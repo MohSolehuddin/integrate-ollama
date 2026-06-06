@@ -15,6 +15,16 @@ app.get('/test', (req, res) => {
   res.json({ status: 'ok', message: 'Test endpoint', timestamp: new Date().toISOString() });
 });
 
+// Health check (Production-ready)
+app.get('/health', (req, res) => {
+  res.json({ 
+    status: 'ok', 
+    service: 'Integrate Ollama - API Gateway',
+    port: config.PORT,
+    timestamp: new Date().toISOString()
+  });
+});
+
 // Test Ollama
 app.get('/test/ollama', (req, res) => {
   try {
