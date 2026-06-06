@@ -84,7 +84,7 @@ if (require.main === module) {
   const PORT = config.PORT;
   app.listen(PORT, () => {
     console.log(`Server berjalan di http://localhost:${PORT}`);
-    console.log(`Terhubung ke Ollama di: ${config.OLLAMA_URL}`);
+    console.log(`Terhubung ke Ollama Cloud di: ${config.OLLAMA_CLOUD_URL}`);
     console.log(`Terhubung ke Budget Service di: ${config.BUDGET_SERVICE_URL}`);
   });
 }
