@@ -1,10 +1,9 @@
 const express = require('express');
 const router = express.Router();
+const transactionController = require('../controllers/transaction.controller');
 
 // POST /api/transaction - Parse and sync transaction
-router.post('/transaction', async (req, res) => {
-  res.json({ success: true, message: 'Transaction endpoint' });
-});
+router.post('/transaction', transactionController.parseTransaction);
 
 // GET /test - Test endpoint
 router.get('/test', (req, res) => {
