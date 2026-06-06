@@ -1,0 +1,115 @@
+{
+  "info": {
+    "name": "Ollama Telegram Integration",
+    "description": "Collection for testing Ollama Telegram Integration API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3002/health",
+          "host": ["localhost"],
+          "port": "3002",
+          "path": ["health"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Test Transaction Parsing",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"senderId\": \"7133351898\",\n  \"chatId\": \"7133351898\",\n  \"rawText\": \"makan 25rb\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3002/api/transaction",
+          "host": ["localhost"],
+          "port": "3002",
+          "path": ["api", "transaction"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Test Transaction Parsing - GoFood",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"senderId\": \"7133351898\",\n  \"chatId\": \"7133351898\",\n  \"rawText\": \"gopud 32rb\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3002/api/transaction",
+          "host": ["localhost"],
+          "port": "3002",
+          "path": ["api", "transaction"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Test Transaction Parsing - Utang",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"senderId\": \"7133351898\",\n  \"chatId\": \"7133351898\",\n  \"rawText\": \"utang ke agus 300rb\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3002/api/transaction",
+          "host": ["localhost"],
+          "port": "3002",
+          "path": ["api", "transaction"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Setup Telegram Webhook",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"token\": \"795183…OQaY\",\n  \"url\": \"https://msytc.my.id/integrate-ollama/api/transaction\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3002/api/telegram/setup-webhook",
+          "host": ["localhost"],
+          "port": "3002",
+          "path": ["api", "telegram", "setup-webhook"]
+        }
+      },
+      "response": []
+    }
+  ]
+}
