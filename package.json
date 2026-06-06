@@ -8,12 +8,17 @@
     "dev": "node --watch src/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["telegram", "ollama", "api-gateway"],
+  "keywords": [
+    "telegram",
+    "ollama",
+    "api-gateway"
+  ],
   "author": "Moh Solehuddin",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
     "@actual-app/api": "^26.1.0",
+    "axios": "^1.17.0",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
     "sqlite3": "^5.1.7"
