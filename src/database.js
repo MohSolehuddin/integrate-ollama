@@ -96,8 +96,46 @@ const getUserBySenderId = (senderId) => {
   });
 };
 
+// Helper function to get or create user by sender_id (upsert)
+const getOrCreateUser = (senderId, email, name) => {
+  return new Promise((resolve, reject) => {
+    db.get(
+      'SELECT * FROM users WHERE sender_id = ?',
+      [senderId],
+      (err, row) => {
+        if (err) reject(err);
+        else if (row) {
+          // User exists, return it
+          resolve(row);
+        } else {
+          // User doesn't exist, create it
+          db.run(
+            'INSERT INTO users (sender_id, email, name) VALUES (?, ?, ?)',
+            [senderId, email, name],
+            function(err) {
+              if (err) reject(err);
+              else {
+                // Return the newly created user
+                db.get(
+                  'SELECT * FROM users WHERE sender_id = ?',
+                  [senderId],
+                  (err, newRow) => {
+                    if (err) reject(err);
+                    else resolve(newRow);
+                  }
+                );
+              }
+            }
+          );
+        }
+      }
+    );
+  });
+};
+
 // Export db and helpers
 module.exports = {
   db,
-  getUserBySenderId
+  getUserBySenderId,
+  getOrCreateUser
 };
