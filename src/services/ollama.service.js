@@ -1,8 +1,40 @@
 const axios = require('axios');
 const config = require('../config');
+const fs = require('fs');
+const logPath = '/tmp/ollama-service-debug.log';
+
+// Add debug write function
+const writeDebug = (msg) => {
+  fs.appendFileSync(logPath, `[${new Date().toISOString()}] ${msg}\n`);
+};
+
+// Add axios request logging
+axios.interceptors.request.use(config => {
+  writeDebug(`axios.request -> ${config.method?.toUpperCase()} ${config.url}`);
+  if (config.headers && config.headers['Authorization']) {
+    writeDebug(`auth header: ${config.headers['Authorization'].substring(0, 15)}...`);
+  }
+  return config;
+});
+
+// Add axios response logging
+axios.interceptors.response.use(
+  response => {
+    writeDebug(`axios.response -> ${response.status} ${response.config.url}`);
+    return response;
+  },
+  error => {
+    writeDebug(`axios.error -> ${error.response?.status || 'UNKNOWN'} ${error.config?.url}`);
+    writeDebug(`error.message: ${error.message}`);
+    if (error.response?.data) {
+      writeDebug(`error.data: ${error.response.data.toString().substring(0, 200)}`);
+    }
+    return Promise.reject(error);
+  }
+);
 
 /**
- * Preprocess teks mentah menggunakan Ollama Cloud (qwen3-coder-next:cloud)
+ * Preprocess teks mentah menggunakan Ollama Cloud API (native /api/chat)
  * untuk merapikan dan memperjelas bahasanya.
  * @param {string} rawText Teks transaksi mentah dari pengguna
  * @returns {Promise<string>} Kalimat yang lebih jelas
@@ -28,27 +60,23 @@ Input: "${rawText}"
 Output: `.trim();
 
   try {
-    if (!config.OLLAMA_CLOUD_KEY) {
-      throw new Error('OLLAMA_CLOUD_KEY belum di-set. Pastikan sudah ada di .env');
-    }
-
-    const response = await axios.post(`${config.OLLAMA_CLOUD_URL}/v1/chat/completions`, {
+    console.log("DEBUG: Calling Ollama with key=", config.OLLAMA_CLOUD_KEY.substring(0, 10) + "...");
+    const response = await axios.post(`${config.OLLAMA_CLOUD_URL}/chat`, {
       model: config.OLLAMA_CLOUD_MODEL,
       messages: [
         { role: 'system', content: systemPrompt },
-        { role: 'user', content: 'Transaksi: ' + rawText }
+        { role: 'user', content: rawText }
       ],
-      temperature: 0.1,
-      max_tokens: 100
+      stream: false
     }, {
       headers: {
         'Authorization': `Bearer ${config.OLLAMA_CLOUD_KEY}`,
         'Content-Type': 'application/json'
       },
-      timeout: 10000 // 10s timeout
+      timeout: 10000
     });
 
-    return response.data.choices[0].message.content.trim();
+    return response.data.message.content.trim();
   } catch (error) {
     if (error.code === 'ECONNABORTED') {
       throw new Error(`Timeout: preprocess terlalu lama (>10s)`);
@@ -58,13 +86,13 @@ Output: `.trim();
 };
 
 /**
- * Berkomunikasi dengan Ollama Cloud API (qwen3-coder-next:cloud) untuk mengekstrak data transaksi ke JSON.
+ * Berkomunikasi dengan Ollama Cloud API untuk mengekstrak data transaksi ke JSON.
  * @param {string} rawText Teks transaksi mentah
  * @returns {Promise<Object>} Data transaksi yang sudah di-parse menjadi Object JavaScript
  */
 const extractTransactionData = async (rawText) => {
   try {
-    console.log("Original Input:", rawText);
+    console.log("DEBUG extractTransactionData: Calling preprocessText for:", rawText);
     const cleanText = await preprocessText(rawText);
     console.log("Cleaned by Ollama Cloud:", cleanText);
 
@@ -84,14 +112,13 @@ JSON: {"date": null, "payee": "Agus", "category": "debt", "amount": 300000, "not
 Text: "${cleanText}"
 JSON: `.trim();
 
-    const response = await axios.post(`${config.OLLAMA_CLOUD_URL}/v1/chat/completions`, {
+    const response = await axios.post(`${config.OLLAMA_CLOUD_URL}/chat`, {
       model: config.OLLAMA_CLOUD_MODEL,
       messages: [
         { role: 'system', content: systemPrompt },
-        { role: 'user', content: 'Parse: ' + cleanText }
+        { role: 'user', content: cleanText }
       ],
-      temperature: 0.0,
-      max_tokens: 256
+      stream: false
     }, {
       headers: {
         'Authorization': `Bearer ${config.OLLAMA_CLOUD_KEY}`,
@@ -100,7 +127,7 @@ JSON: `.trim();
       timeout: 10000
     });
 
-    const content = response.data.choices[0].message.content.trim();
+    const content = response.data.message.content.trim();
     // Extract JSON block (handles markdown ```json or plain)
     const jsonMatch = content.match(/\{[\s\S]*\}/);
     if (!jsonMatch) {
