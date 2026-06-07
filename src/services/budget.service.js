@@ -1,5 +1,5 @@
-// Budget service - use http to call the budget service directly
-const http = require('http');
+// Budget service - use axios to call the budget service directly
+const axios = require('axios');
 
 const config = require('../config');
 
@@ -69,9 +69,9 @@ const getCategories = async (senderId) => {
  */
 const processTransaction = async (senderId, transactionData) => {
   try {
-    const response = await callBudgetService('/api/budget/transactions', {
+    const response = await callBudgetService('/budget/transactions', {
       method: 'POST',
-      body: {
+      data: {
         accountId: 'local_1',
         transactions: [{
           date: transactionData.date || new Date().toISOString().split('T')[0],
@@ -102,48 +102,31 @@ const processTransaction = async (senderId, transactionData) => {
  * Make HTTP call to budget service
  */
 const callBudgetService = async (endpoint, options = {}) => {
-  return new Promise((resolve, reject) => {
-    const url = new URL(endpoint, config.BUDGET_SERVICE_URL);
+  const url = `${config.BUDGET_SERVICE_URL}${endpoint}`;
+  
+  try {
+    console.log(`DEBUG callBudgetService: endpoint=${endpoint}, method=${options.method}`);
     
-    const requestOptions = {
-      method: options.method || 'GET',
+    const response = await axios({
+      method: options.method,
+      url: url,
       headers: {
         'Content-Type': 'application/json',
         ...options.headers
-      }
-    };
+      },
+      data: options.data || null,
+      timeout: 10000
+    });
 
-    if (options.body) {
-      requestOptions.body = JSON.stringify(options.body);
+    console.log(`DEBUG callBudgetService: response status=${response.status}`);
+    return response.data;
+  } catch (error) {
+    console.error(`DEBUG callBudgetService: ERROR - ${error.response?.status || 'UNKNOWN'} ${error.message}`);
+    if (error.response?.data) {
+      console.error(`DEBUG callBudgetService: response data=${error.response.data}`);
     }
-
-    const req = http.request(url, requestOptions, (res) => {
-      let data = '';
-
-      res.on('data', (chunk) => {
-        data += chunk;
-      });
-
-      res.on('end', () => {
-        try {
-          const parsed = JSON.parse(data);
-          if (res.statusCode >= 200 && res.statusCode < 300) {
-            resolve(parsed);
-          } else {
-            reject(new Error(`Budget service error: ${res.statusCode} ${parsed.error || data}`));
-          }
-        } catch (error) {
-          reject(new Error(`Failed to parse response: ${error.message}`));
-        }
-      });
-    });
-
-    req.on('error', (error) => {
-      reject(new Error(`Request failed: ${error.message}`));
-    });
-
-    req.end();
-  });
+    throw error;
+  }
 };
 
 module.exports = {

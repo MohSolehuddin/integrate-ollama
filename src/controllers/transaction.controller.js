@@ -36,8 +36,9 @@ const parseTransaction = async (req, res) => {
     console.log(`Processing transaction for sender: ${senderId} (allowed)`);
 
     // Parse transaction via Ollama
+    console.log(`DEBUG: Calling extractTransactionData for: ${inputData}`);
     const parsedData = await ollamaService.extractTransactionData(inputData);
-    console.log(`Parsed data:`, parsedData);
+    console.log(`DEBUG: Parsed data:`, JSON.stringify(parsedData, null, 2));
 
     // Get or create user in database
     let user = await getUserBySenderId(senderId);
